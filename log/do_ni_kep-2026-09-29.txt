@@ -1,14 +1,8 @@
   Mật khẩu ứng dụng: OK
-  Kho: 36 đài, cập nhật 2026-09-28T11:21
+  Kho: 36 đài, cập nhật 2026-09-29T07:52
   Cập nhật 36 đài (tải 20 kỳ gần nhất mỗi đài)...
-     + [ 1] TP. Hồ Chí Minh       1 kỳ mới → mới nhất 2026-09-28
-     + [ 8] Cà Mau                1 kỳ mới → mới nhất 2026-09-28
-     + [12] Đồng Tháp             1 kỳ mới → mới nhất 2026-09-28
-     + [30] Phú Yên               1 kỳ mới → mới nhất 2026-09-28
-     + [35] Thành phố Huế         1 kỳ mới → mới nhất 2026-09-28
-     + [36] Miền Bắc (XSMB)       1 kỳ mới → mới nhất 2026-09-28
 
-  Xong. Thêm 6 kỳ mới.
+  Xong. Thêm 0 kỳ mới.
 ================================================================================
   ĐO NI KÉP 50 CON  |  Thứ 3 29.09.2026
   3 họ bỏ phiếu · >= 11/20 ở CẢ 2 cửa sổ · không giới hạn đề xuất
