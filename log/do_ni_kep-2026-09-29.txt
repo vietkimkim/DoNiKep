@@ -1,0 +1,49 @@
+  Mật khẩu ứng dụng: OK
+  Kho: 36 đài, cập nhật 2026-09-28T11:21
+  Cập nhật 36 đài (tải 20 kỳ gần nhất mỗi đài)...
+     + [ 1] TP. Hồ Chí Minh       1 kỳ mới → mới nhất 2026-09-28
+     + [ 8] Cà Mau                1 kỳ mới → mới nhất 2026-09-28
+     + [12] Đồng Tháp             1 kỳ mới → mới nhất 2026-09-28
+     + [30] Phú Yên               1 kỳ mới → mới nhất 2026-09-28
+     + [35] Thành phố Huế         1 kỳ mới → mới nhất 2026-09-28
+     + [36] Miền Bắc (XSMB)       1 kỳ mới → mới nhất 2026-09-28
+
+  Xong. Thêm 6 kỳ mới.
+================================================================================
+  ĐO NI KÉP 50 CON  |  Thứ 3 29.09.2026
+  3 họ bỏ phiếu · >= 11/20 ở CẢ 2 cửa sổ · không giới hạn đề xuất
+================================================================================
+
+  BẠC LIÊU
+     ① Đặc Biệt     ĐỂ TRỐNG  GẦN ĐÂY + TẦN SUẤT + ĐỘC LẬP · cửa sổ 1: 6/20 · cửa sổ 2: 12/20
+     ② Giải Nhất    ĐỂ TRỐNG  GỘP GIẢI + GAN + TỔNG CS · cửa sổ 1: 9/20 · cửa sổ 2: 8/20
+     ③ Giải 8       ĐỂ TRỐNG  MARKOV + ĐỘC LẬP + CỬA SỔ · cửa sổ 1: 8/20 · cửa sổ 2: 14/20
+
+  BẾN TRE
+     ① Đặc Biệt     ĐỂ TRỐNG  GẦN ĐÂY + TẦN SUẤT + CỬA SỔ · cửa sổ 1: 9/20 · cửa sổ 2: 11/20
+     ② Giải Nhất    ĐỂ TRỐNG  ĐỘC LẬP + MARKOV + TẦN SUẤT · cửa sổ 1: 10/20 · cửa sổ 2: 11/20
+     ③ Giải 8       ĐỀ XUẤT   TẦN SUẤT + GẦN ĐÂY + TỔNG CS · cửa sổ 1: 11/20 · cửa sổ 2: 13/20
+
+  VŨNG TÀU
+     ① Đặc Biệt     ĐỂ TRỐNG  TỔNG CS + MARKOV + ĐỘC LẬP · cửa sổ 1: 12/20 · cửa sổ 2: 7/20
+     ② Giải Nhất    ĐỂ TRỐNG  TẦN SUẤT + GẦN ĐÂY + CỬA SỔ · cửa sổ 1: 10/20 · cửa sổ 2: 10/20
+     ③ Giải 8       ĐỂ TRỐNG  GAN + GỘP GIẢI + CỬA SỔ · cửa sổ 1: 12/20 · cửa sổ 2: 10/20
+
+  QUẢNG NAM
+     ① Đặc Biệt     ĐỂ TRỐNG  ĐỘC LẬP + GỘP GIẢI + CỬA SỔ · cửa sổ 1: 10/20 · cửa sổ 2: 9/20
+     ② Giải Nhất    ĐỂ TRỐNG  CỬA SỔ + GẦN ĐÂY + TỔNG CS · cửa sổ 1: 8/20 · cửa sổ 2: 10/20
+     ③ Giải 8       ĐỂ TRỐNG  TỔNG CS + GAN + ĐỘC LẬP · cửa sổ 1: 15/20 · cửa sổ 2: 7/20
+
+  ĐẮK LẮK
+     ① Đặc Biệt     ĐỂ TRỐNG  MARKOV + GỘP GIẢI + GAN · cửa sổ 1: 7/20 · cửa sổ 2: 12/20
+     ② Giải Nhất    ĐỂ TRỐNG  GAN + CỬA SỔ + MARKOV · cửa sổ 1: 10/20 · cửa sổ 2: 11/20
+     ③ Giải 8       ĐỂ TRỐNG  MARKOV + GAN + TỔNG CS · cửa sổ 1: 7/20 · cửa sổ 2: 12/20
+
+  MIỀN BẮC (XSMB)
+     ① Đặc Biệt     ĐỀ XUẤT   GAN + MARKOV + CỬA SỔ · cửa sổ 1: 12/20 · cửa sổ 2: 13/20
+     ② Giải Nhất    ĐỂ TRỐNG  GẦN ĐÂY + TẦN SUẤT + CỬA SỔ · cửa sổ 1: 10/20 · cửa sổ 2: 9/20
+
+  2 đề xuất · 0 dự bị · 17 giải
+
+  Đang gửi email...
+  ✓ Đã gửi email tới Linh.tm.pg@gmail.com
