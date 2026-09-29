@@ -1,43 +1,43 @@
   Mật khẩu ứng dụng: OK
-  Kho: 36 đài, cập nhật 2026-09-29T07:52
+  Kho: 36 đài, cập nhật 2026-09-29T09:43
   Cập nhật 36 đài (tải 20 kỳ gần nhất mỗi đài)...
 
   Xong. Thêm 0 kỳ mới.
 ================================================================================
-  ĐO NI KÉP 50 CON  |  Thứ 3 29.09.2026
-  3 họ bỏ phiếu · >= 11/20 ở CẢ 2 cửa sổ · không giới hạn đề xuất
+  ĐO NI KÉP 50 CON  |  Thứ 3 29.09.2026  |  mọi giải đều có đề xuất
+  3 họ bỏ phiếu · nhãn độ tin: >= 11/20 ở từng cửa sổ
 ================================================================================
 
   BẠC LIÊU
-     ① Đặc Biệt     ĐỂ TRỐNG  GẦN ĐÂY + TẦN SUẤT + ĐỘC LẬP · cửa sổ 1: 6/20 · cửa sổ 2: 12/20
-     ② Giải Nhất    ĐỂ TRỐNG  GỘP GIẢI + GAN + TỔNG CS · cửa sổ 1: 9/20 · cửa sổ 2: 8/20
-     ③ Giải 8       ĐỂ TRỐNG  MARKOV + ĐỘC LẬP + CỬA SỔ · cửa sổ 1: 8/20 · cửa sổ 2: 14/20
+     ① Đặc Biệt     QUA 1 CỬA SỔ  GẦN ĐÂY + TẦN SUẤT + ĐỘC LẬP · cửa sổ 1: 6/20 · cửa sổ 2: 12/20
+     ② Giải Nhất    KHÔNG QUA     GỘP GIẢI + GAN + TỔNG CS · cửa sổ 1: 9/20 · cửa sổ 2: 8/20
+     ③ Giải 8       QUA 1 CỬA SỔ  MARKOV + ĐỘC LẬP + CỬA SỔ · cửa sổ 1: 8/20 · cửa sổ 2: 14/20
 
   BẾN TRE
-     ① Đặc Biệt     ĐỂ TRỐNG  GẦN ĐÂY + TẦN SUẤT + CỬA SỔ · cửa sổ 1: 9/20 · cửa sổ 2: 11/20
-     ② Giải Nhất    ĐỂ TRỐNG  ĐỘC LẬP + MARKOV + TẦN SUẤT · cửa sổ 1: 10/20 · cửa sổ 2: 11/20
-     ③ Giải 8       ĐỀ XUẤT   TẦN SUẤT + GẦN ĐÂY + TỔNG CS · cửa sổ 1: 11/20 · cửa sổ 2: 13/20
+     ① Đặc Biệt     QUA 1 CỬA SỔ  GẦN ĐÂY + TẦN SUẤT + CỬA SỔ · cửa sổ 1: 9/20 · cửa sổ 2: 11/20
+     ② Giải Nhất    QUA 1 CỬA SỔ  ĐỘC LẬP + MARKOV + TẦN SUẤT · cửa sổ 1: 10/20 · cửa sổ 2: 11/20
+     ③ Giải 8       QUA 2 CỬA SỔ  TẦN SUẤT + GẦN ĐÂY + TỔNG CS · cửa sổ 1: 11/20 · cửa sổ 2: 13/20
 
   VŨNG TÀU
-     ① Đặc Biệt     ĐỂ TRỐNG  TỔNG CS + MARKOV + ĐỘC LẬP · cửa sổ 1: 12/20 · cửa sổ 2: 7/20
-     ② Giải Nhất    ĐỂ TRỐNG  TẦN SUẤT + GẦN ĐÂY + CỬA SỔ · cửa sổ 1: 10/20 · cửa sổ 2: 10/20
-     ③ Giải 8       ĐỂ TRỐNG  GAN + GỘP GIẢI + CỬA SỔ · cửa sổ 1: 12/20 · cửa sổ 2: 10/20
+     ① Đặc Biệt     QUA 1 CỬA SỔ  TỔNG CS + MARKOV + ĐỘC LẬP · cửa sổ 1: 12/20 · cửa sổ 2: 7/20
+     ② Giải Nhất    KHÔNG QUA     TẦN SUẤT + GẦN ĐÂY + CỬA SỔ · cửa sổ 1: 10/20 · cửa sổ 2: 10/20
+     ③ Giải 8       QUA 1 CỬA SỔ  GAN + GỘP GIẢI + CỬA SỔ · cửa sổ 1: 12/20 · cửa sổ 2: 10/20
 
   QUẢNG NAM
-     ① Đặc Biệt     ĐỂ TRỐNG  ĐỘC LẬP + GỘP GIẢI + CỬA SỔ · cửa sổ 1: 10/20 · cửa sổ 2: 9/20
-     ② Giải Nhất    ĐỂ TRỐNG  CỬA SỔ + GẦN ĐÂY + TỔNG CS · cửa sổ 1: 8/20 · cửa sổ 2: 10/20
-     ③ Giải 8       ĐỂ TRỐNG  TỔNG CS + GAN + ĐỘC LẬP · cửa sổ 1: 15/20 · cửa sổ 2: 7/20
+     ① Đặc Biệt     KHÔNG QUA     ĐỘC LẬP + GỘP GIẢI + CỬA SỔ · cửa sổ 1: 10/20 · cửa sổ 2: 9/20
+     ② Giải Nhất    KHÔNG QUA     CỬA SỔ + GẦN ĐÂY + TỔNG CS · cửa sổ 1: 8/20 · cửa sổ 2: 10/20
+     ③ Giải 8       QUA 1 CỬA SỔ  TỔNG CS + GAN + ĐỘC LẬP · cửa sổ 1: 15/20 · cửa sổ 2: 7/20
 
   ĐẮK LẮK
-     ① Đặc Biệt     ĐỂ TRỐNG  MARKOV + GỘP GIẢI + GAN · cửa sổ 1: 7/20 · cửa sổ 2: 12/20
-     ② Giải Nhất    ĐỂ TRỐNG  GAN + CỬA SỔ + MARKOV · cửa sổ 1: 10/20 · cửa sổ 2: 11/20
-     ③ Giải 8       ĐỂ TRỐNG  MARKOV + GAN + TỔNG CS · cửa sổ 1: 7/20 · cửa sổ 2: 12/20
+     ① Đặc Biệt     QUA 1 CỬA SỔ  MARKOV + GỘP GIẢI + GAN · cửa sổ 1: 7/20 · cửa sổ 2: 12/20
+     ② Giải Nhất    QUA 1 CỬA SỔ  GAN + CỬA SỔ + MARKOV · cửa sổ 1: 10/20 · cửa sổ 2: 11/20
+     ③ Giải 8       QUA 1 CỬA SỔ  MARKOV + GAN + TỔNG CS · cửa sổ 1: 7/20 · cửa sổ 2: 12/20
 
   MIỀN BẮC (XSMB)
-     ① Đặc Biệt     ĐỀ XUẤT   GAN + MARKOV + CỬA SỔ · cửa sổ 1: 12/20 · cửa sổ 2: 13/20
-     ② Giải Nhất    ĐỂ TRỐNG  GẦN ĐÂY + TẦN SUẤT + CỬA SỔ · cửa sổ 1: 10/20 · cửa sổ 2: 9/20
+     ① Đặc Biệt     QUA 2 CỬA SỔ  GAN + MARKOV + CỬA SỔ · cửa sổ 1: 12/20 · cửa sổ 2: 13/20
+     ② Giải Nhất    KHÔNG QUA     GẦN ĐÂY + TẦN SUẤT + CỬA SỔ · cửa sổ 1: 10/20 · cửa sổ 2: 9/20
 
-  2 đề xuất · 0 dự bị · 17 giải
+  17 bộ 50 con · QUA 2 CỬA SỔ 2 · QUA 1 CỬA SỔ 10 · KHÔNG QUA 5
 
   Đang gửi email...
   ✓ Đã gửi email tới Linh.tm.pg@gmail.com
