@@ -1,52 +1,40 @@
 """
-DO_NI_KEP — ĐO NI KÉP 50 CON: 3 họ logic mạnh nhất BỎ PHIẾU ra 50 con, bộ phiếu đó
-            phải thắng ở HAI cửa sổ liên tiếp. KHÔNG giới hạn số đề xuất mỗi ngày.
+DO_NI_KEP — ĐO NI KÉP 50 CON: MỌI GIẢI của MỌI ĐÀI quay hôm đó đều có bộ 50 con.
+            3 họ logic mạnh nhất BỎ PHIẾU ra 50 con; hai cửa sổ kiểm là NHÃN ĐỘ TIN,
+            không còn là cổng chặn.
 
 ═══════════════════════════════════════════════════════════════════════════════
-QUY TẮC (phương án B — người dùng duyệt)
-    Mỗi ngày, với từng giải của từng đài quay hôm đó, lấy 150 kỳ gần nhất:
-      ├── Kỳ 1–110   : mỗi họ chọn cấu hình tốt nhất của mình, xếp hạng các họ
-      │                (theo thứ hạng). 3 HỌ ĐỨNG ĐẦU được quyền bỏ phiếu.
-      │                Họ ĐỀU (đối chứng, luôn chọn 00–63) KHÔNG BAO GIỜ bỏ phiếu.
-      ├── Kỳ 111–130 : CỬA SỔ 1 — bộ 3 họ bỏ phiếu ra 50 con, phải trúng >= 11/20
-      └── Kỳ 131–150 : CỬA SỔ 2 — CÙNG bộ 3 họ đó, phải trúng >= 11/20
-    Qua cả hai -> ĐỀ XUẤT, xếp hạng theo bằng chứng (tổng trúng 2 cửa sổ).
-    Không qua -> ĐỂ TRỐNG, ghi rõ cửa sổ nào trượt.
+QUY TẮC (người dùng yêu cầu: tất cả các giải của các đài đều có đề xuất)
+    Với TỪNG giải của TỪNG đài quay hôm đó, lấy 150 kỳ gần nhất:
+      ├── Kỳ 1–110   : mỗi họ chọn cấu hình tốt nhất, xếp hạng các họ theo thứ
+      │                hạng. 3 HỌ ĐỨNG ĐẦU bỏ phiếu. Họ ĐỀU không bao giờ bỏ phiếu.
+      ├── Kỳ 111–130 : CỬA SỔ 1 — bộ 3 họ bỏ phiếu ra 50 con, đếm số lần trúng
+      └── Kỳ 131–150 : CỬA SỔ 2 — cùng bộ 3 họ, đếm số lần trúng
+    Hôm nay: CÙNG bộ 3 họ bỏ phiếu ra 50 con -> LUÔN đề xuất.
 
-    BỎ GIỚI HẠN 3 ĐỀ XUẤT/NGÀY (người dùng quyết định sau 1 ngày thua cả 3 bộ):
-      · Giới hạn KHÔNG đổi tỷ lệ trúng của từng bộ — nó chỉ giới hạn số bộ phải đặt.
-      · Không giới hạn: trung bình ~3–4 đề xuất/ngày, có ngày 6–7 -> tổng tiền đặt
-        mỗi ngày tăng, kỳ vọng mỗi bộ vẫn -5%.
-      · Sổ vẫn ghi THỨ HẠNG từng đề xuất; bảng tiến cứu tách "hạng 1–3" và
-        "hạng 4 trở đi" để dữ liệu tự trả lời giải bằng chứng yếu hơn có kém hơn không.
+    NHÃN ĐỘ TIN — chỉ để tham khảo, KHÔNG chặn bộ số nào:
+      QUA 2 CỬA SỔ : cả hai cửa sổ >= 11/20 (55%, trên hoà vốn 52,63%)
+      QUA 1 CỬA SỔ : chỉ một cửa sổ đạt
+      KHÔNG QUA    : cả hai cửa sổ dưới 11/20
+      ÍT DỮ LIỆU   : < 100 kỳ, không kiểm được 2 cửa sổ -> 50 con theo tần suất
+      DỰ PHÒNG     : đài lỗi dữ liệu -> 50 con theo tần suất gộp cùng giải của các
+                     đài khác hôm nay
+    Trên giải ngẫu nhiên: ~17% "QUA 2 CỬA SỔ", ~48% "QUA 1", ~35% "KHÔNG QUA".
 
-    CÁCH BỎ PHIẾU: mỗi họ đề cử 64 con của mình. Xếp 100 con theo số phiếu (0–3),
-    hoà phiếu thì con có TỔNG THỨ HẠNG trong 3 họ nhỏ hơn đứng trước. Lấy 50 con đầu.
+    CÁCH BỎ PHIẾU: mỗi họ đề cử 64 con. Xếp 100 con theo số phiếu (0–3); hoà phiếu
+    thì TỔNG THỨ HẠNG trong 3 họ nhỏ hơn đứng trước. Lấy 50 con đầu.
 
-VÌ SAO 50 CON — kỳ vọng không đổi, nhưng hình dạng thắng thua tốt hơn hẳn
-                    64 con            50 con
-    Mốc trúng        64%               50%
-    Hoà vốn          67,37%            52,63%
-    Thắng / thua     +31 / −64         +45 / −50
-    Tỷ lệ thắng/thua 0,48              0,90
+VÌ SAO 50 CON: kỳ vọng không đổi (−5%) nhưng thắng/thua +45/−50 thay vì +31/−64.
+VÌ SAO 3 HỌ (giải có logic thật, 50 con): bỏ phiếu đều 9 họ 70,7% · 3 họ mạnh
+    nhất 76,3% · một họ tốt nhất 86,5%. Giải ngẫu nhiên: mọi cách ~50%.
 
-VÌ SAO CHỈ 3 HỌ BỎ PHIẾU — đo trên giải có logic thật, cùng 50 con
-    Bỏ phiếu đều 9 họ : 70,7%  (họ không bắt được logic kéo con sai vào)
-    3 họ mạnh nhất    : 76,3%  <- phương án B
-    Một họ tốt nhất   : 86,5%
-    Trên giải ngẫu nhiên mọi cách đều ~50%.
-
-VÌ SAO NGƯỠNG 11/20: trên hoà vốn 52,63%. Giải ngẫu nhiên qua 1 cửa sổ ~41%,
-    qua cả 2 cửa sổ ~17%. Logic thật giữ được qua cả hai.
-
-SỔ TIẾN CỨU: data/do_ni_kep_50.json (MỚI — không trộn với sổ 64 con cũ).
-    Nhóm: ĐỀ XUẤT (tách hạng 1–3 / hạng 4+) · DỰ BỊ (chỉ còn trong sổ, thời có giới hạn)
-    · ĐỂ TRỐNG (bóng) · NGẪU NHIÊN (50 con đối chứng)
-BẢNG XẾP HẠNG HỌ (chỉ theo dõi): mỗi họ bỏ phiếu được chấm riêng bằng 50 con của
-    chính nó. Lịch sử bản 64 con (do_ni_kep.json, do_ni_20.json) hiển thị riêng,
-    CHỈ ĐỌC — hai mốc 64% và 50% không so trực tiếp được.
+SỔ TIẾN CỨU data/do_ni_kep_50.json — tách theo nhãn độ tin + NGẪU NHIÊN đối chứng.
+    Nhãn bản ghi cũ tính lại từ số trúng 2 cửa sổ -> lịch sử liền mạch.
+    Sau vài tuần: "QUA 2 CỬA SỔ" trúng nhiều hơn hẳn "KHÔNG QUA" thì nhãn có giá trị.
+BẢNG XẾP HẠNG HỌ (chỉ theo dõi) + lịch sử bản 64 con (chỉ đọc).
 
 BA MỐC: bốc bừa 50% · hoà vốn 52,63% · kỳ vọng −5% (tỷ lệ trả 95).
+Máy quay công bằng thì MỌI bộ 50 con trúng 50%.
 ═══════════════════════════════════════════════════════════════════════════════
 """
 import os, sys, json, math, html, zlib, smtplib, traceback
@@ -71,10 +59,9 @@ N_CUA_SO     = 20     # độ dài MỖI cửa sổ kiểm
 SO_CON       = 50     # số con cược
 SO_DE_CU     = 64     # mỗi họ đề cử bao nhiêu con khi bỏ phiếu
 SO_HO_BAU    = 3      # số họ mạnh nhất được bỏ phiếu
-NGUONG_KY    = 11     # phải trúng >= 11/20 (55%, trên hoà vốn 52,63%) ở CẢ HAI cửa sổ
+NGUONG_KY    = 11     # một cửa sổ "đạt" khi trúng >= 11/20 (55%, trên hoà vốn 52,63%)
 T_BD         = 30     # khám phá bắt đầu dự báo từ kỳ thứ 31
-N_MIN        = 100    # ít hơn -> "THIẾU"
-MAX_DE_XUAT  = None   # None = KHÔNG giới hạn. Đặt số (vd 3) để bật lại giới hạn mỗi ngày
+N_MIN        = 100    # ít hơn -> "ÍT DỮ LIỆU", vẫn ra 50 con theo tần suất
 TY_LE_TRA    = 95.0
 HOA_VON      = SO_CON / TY_LE_TRA          # 52,63%
 MOC          = SO_CON / 100.0              # 50%
@@ -94,6 +81,12 @@ HO = {"TẦN SUẤT": ["TẦN SUẤT"],
       "ĐỘC LẬP":  ["ĐỘC LẬP"], "MARKOV": ["MARKOV"], "TỔNG CS": ["TỔNG CS"],
       "GỘP GIẢI": ["GỘP GIẢI"], "LỊCH": ["LỊCH"], "GAN": ["GAN"], "ĐỀU": ["ĐỀU"]}
 HO_KHONG_BAU = {"ĐỀU"}
+
+MUC_2, MUC_1, MUC_0 = "QUA 2 CỬA SỔ", "QUA 1 CỬA SỔ", "KHÔNG QUA"
+MUC_IT, MUC_DP = "ÍT DỮ LIỆU", "DỰ PHÒNG"
+THU_TU_MUC = [MUC_2, MUC_1, MUC_0, MUC_IT, MUC_DP]
+MAU = {MUC_2: "#2e7d32", MUC_1: "#ef6c00", MUC_0: "#78909c", MUC_IT: "#90a4ae", MUC_DP: "#c62828"}
+
 
 
 # ==============================================================================
@@ -192,7 +185,7 @@ def _hang(cfg, X, t0, t1):
 
 
 # ==============================================================================
-#  CHỌN 3 HỌ + BỎ PHIẾU 50 CON
+#  CHỌN 3 HỌ + BỎ PHIẾU 50 CON — chép nguyên từ bản đã qua kiểm thử
 # ==============================================================================
 
 def chon_ho_bau(X, ds, t_kt):
@@ -225,12 +218,27 @@ def _trung_bo(X, ba_ho, dai, t0, t1):
     return sum(1 for t in range(t0, t1) if mt[t] in set(bo_phieu(X, ba_ho, dai, t, thu[t])[0]))
 
 
+# ==============================================================================
+#  QUYẾT ĐỊNH 1 GIẢI — LUÔN ra 50 con
+# ==============================================================================
+
+def muc_tu_k(k1, k2):
+    """Nhãn độ tin từ số trúng 2 cửa sổ."""
+    return {2: MUC_2, 1: MUC_1, 0: MUC_0}[int(k1 >= NGUONG_KY) + int(k2 >= NGUONG_KY)]
+
+
+def tan_suat_50(ds_so):
+    c = np.bincount(np.asarray(ds_so, dtype=int), minlength=100) if len(ds_so) else np.zeros(100)
+    return sorted(int(v) for v in _thu_tu(c)[:SO_CON])
+
+
 def quyet_dinh(mt, pool, thu_list, thu_hn):
     """Không rò rỉ: 3 họ được chọn TRƯỚC cả hai cửa sổ; mỗi kỳ trong cửa sổ chỉ dùng
-       dữ liệu trước nó; hôm nay dùng CHÍNH bộ 3 họ đã được kiểm chứng."""
+       dữ liệu trước nó; hôm nay dùng CHÍNH bộ 3 họ đó. Luôn trả về 50 con."""
     n = len(mt)
     if n < N_MIN:
-        return {"trang_thai": "THIẾU", "ly_do": f"chỉ {n} kỳ, cần >= {N_MIN}"}
+        return {"muc": MUC_IT, "so": tan_suat_50(mt),
+                "ly_do": f"chỉ {n} kỳ (cần {N_MIN} để kiểm 2 cửa sổ) — 50 con theo tần suất {n} kỳ"}
     X = _chuan_bi(mt, pool, thu_list)
     ds = cau_hinh(len(set(thu_list)) >= 2)
     t1, t2 = n - 2 * N_CUA_SO, n - N_CUA_SO
@@ -238,21 +246,10 @@ def quyet_dinh(mt, pool, thu_list, thu_hn):
     k1 = _trung_bo(X, ba_ho, dai, t1, t2)
     k2 = _trung_bo(X, ba_ho, dai, t2, n)
     so, phieu = bo_phieu(X, ba_ho, dai, n, thu_hn)
-    dong_thuan = {p: int(sum(1 for v in so if phieu[v] == p)) for p in range(SO_HO_BAU, -1, -1)}
-    rieng = {h: sorted(int(v) for v in _thu_tu(diem(dai[h], X, n, thu_hn))[:SO_CON]) for h in ba_ho}
-    return {"trang_thai": "ỨNG VIÊN" if (k1 >= NGUONG_KY and k2 >= NGUONG_KY) else "ĐỂ TRỐNG",
-            "ba_ho": ba_ho, "cau_hinh": {h: dai[h] for h in ba_ho}, "k1": k1, "k2": k2,
-            "hang": float(np.mean([hang[dai[h]] for h in ba_ho])), "so": so, "phieu": phieu,
-            "dong_thuan": dong_thuan, "rieng": rieng}
-
-
-def ap_gioi_han(tat_ca):
-    """Xếp ứng viên theo bằng chứng mạnh nhất; nếu MAX_DE_XUAT là số thì cắt ở đó."""
-    uv = [o for o in tat_ca if o["trang_thai"] == "ỨNG VIÊN"]
-    uv.sort(key=lambda o: (-(o["k1"] + o["k2"]), -o["k2"], o["hang"], o["stt"], THU_TU_GIAI[o["giai"]]))
-    for i, o in enumerate(uv):
-        o["thu_hang"] = i + 1
-        o["trang_thai"] = "ĐỀ XUẤT" if (MAX_DE_XUAT is None or i < MAX_DE_XUAT) else "DỰ BỊ"
+    return {"muc": muc_tu_k(k1, k2), "ba_ho": ba_ho, "cau_hinh": {h: dai[h] for h in ba_ho},
+            "k1": k1, "k2": k2, "so": so, "phieu": phieu,
+            "dong_thuan": {p: int(sum(1 for v in so if phieu[v] == p)) for p in range(SO_HO_BAU, -1, -1)},
+            "rieng": {h: sorted(int(v) for v in _thu_tu(diem(dai[h], X, n, thu_hn))[:SO_CON]) for h in ba_ho}}
 
 
 def ngau_nhien(ngay, stt, giai):
@@ -261,7 +258,7 @@ def ngau_nhien(ngay, stt, giai):
 
 
 # ==============================================================================
-#  TIỆN ÍCH + SỔ
+#  TIỆN ÍCH + SỔ — chép nguyên từ bản đã qua kiểm thử
 # ==============================================================================
 
 def _vi_tri(tg, giai):
@@ -330,25 +327,23 @@ def cham_cu(tt, hom_nay):
     return moi
 
 
+def muc_ban_ghi(r):
+    """Bản ghi có số trúng 2 cửa sổ (kể cả bản ghi cũ) -> tính lại nhãn cho liền mạch."""
+    if r.get("k1") is not None and r.get("k2") is not None:
+        return muc_tu_k(r["k1"], r["k2"])
+    return r.get("muc", MUC_DP)
+
+
 def thanh_tich(tt):
-    """ĐỀ XUẤT tách theo thứ hạng trong ngày. Bản ghi thời có giới hạn không có thứ hạng:
-       ĐỀ XUẤT khi đó chắc chắn thuộc hạng 1–3."""
-    nhom = {"ĐỀ XUẤT": [0, 0], "   └ hạng 1–3": [0, 0], "   └ hạng 4 trở đi": [0, 0],
-            "DỰ BỊ (thời có giới hạn)": [0, 0], "ĐỂ TRỐNG (bóng)": [0, 0], "NGẪU NHIÊN": [0, 0]}
+    nhom = {"TẤT CẢ BỘ SỐ": [0, 0], **{m: [0, 0] for m in THU_TU_MUC}, "NGẪU NHIÊN": [0, 0]}
     for r in tt["so"]:
-        if not r.get("ket_qua"):
+        kq = r.get("ket_qua")
+        if not kq:
             continue
-        t = int(r["ket_qua"]["trung"])
-        if r["trang_thai"] == "ĐỀ XUẤT":
-            nhom["ĐỀ XUẤT"][0] += t; nhom["ĐỀ XUẤT"][1] += 1
-            h = r.get("thu_hang")
-            k = "   └ hạng 1–3" if (h is None or h <= 3) else "   └ hạng 4 trở đi"
-            nhom[k][0] += t; nhom[k][1] += 1
-        elif r["trang_thai"] == "DỰ BỊ":
-            nhom["DỰ BỊ (thời có giới hạn)"][0] += t; nhom["DỰ BỊ (thời có giới hạn)"][1] += 1
-        else:
-            nhom["ĐỂ TRỐNG (bóng)"][0] += t; nhom["ĐỂ TRỐNG (bóng)"][1] += 1
-        nhom["NGẪU NHIÊN"][0] += int(r["ket_qua"]["trung_ngau"]); nhom["NGẪU NHIÊN"][1] += 1
+        t = int(kq["trung"])
+        nhom["TẤT CẢ BỘ SỐ"][0] += t; nhom["TẤT CẢ BỘ SỐ"][1] += 1
+        m = muc_ban_ghi(r); nhom[m][0] += t; nhom[m][1] += 1
+        nhom["NGẪU NHIÊN"][0] += int(kq["trung_ngau"]); nhom["NGẪU NHIÊN"][1] += 1
     return nhom
 
 
@@ -388,8 +383,35 @@ def bang_ho_cu():
     return dict(sorted(bh.items(), key=lambda kv: -kv[1]["n"]))
 
 
+
+def lay_du_lieu_dai(stt):
+    """Ba tầng, không bỏ phí dữ liệu đang có:
+       1. Kho đủ SO_KY+30 kỳ -> dùng kho.
+       2. Kho thiếu -> tải web.
+       3. Web lỗi -> dùng MỌI kỳ đang có trong kho (dù ít hơn yêu cầu).
+          Trước đây bước này không có: đài có 175 kỳ trong kho mà web lỗi đúng hôm đó
+          bị coi như mất trắng dữ liệu và rơi xuống DỰ PHÒNG."""
+    m = E.lay_tu_master(stt, SO_KY + 30)
+    if m:
+        return m[0], m[1]
+    loi_web = None
+    try:
+        _, _, ng_all, tg_all, _ = E.lay_du_lieu(stt, SO_KY + 30)
+        if tg_all:
+            return tg_all, ng_all
+    except Exception as e:
+        loi_web = e
+    kho = E.doc_master()
+    co = len([k for k in kho["dai"].get(str(stt), {}).get("ky", []) if k.get("ngay")]) if kho else 0
+    if co:
+        m = E.lay_tu_master(stt, co)
+        if m:
+            return m[0], m[1]
+    raise RuntimeError(f"không lấy được dữ liệu: {loi_web or 'kho và web đều trống'}")
+
+
 # ==============================================================================
-#  CHẠY 1 NGÀY
+#  CHẠY 1 NGÀY — MỌI GIẢI CỦA MỌI ĐÀI ĐỀU CÓ 50 CON
 # ==============================================================================
 
 def chay(ngay=None, gui_mail=True):
@@ -399,9 +421,8 @@ def chay(ngay=None, gui_mail=True):
     tt = nap_tt()
 
     print("=" * 80)
-    print(f"  ĐO NI KÉP 50 CON  |  {thu} {hom_nay:%d.%m.%Y}")
-    print(f"  {SO_HO_BAU} họ bỏ phiếu · >= {NGUONG_KY}/{N_CUA_SO} ở CẢ 2 cửa sổ · "
-          + ("không giới hạn đề xuất" if MAX_DE_XUAT is None else f"tối đa {MAX_DE_XUAT} đề xuất/ngày"))
+    print(f"  ĐO NI KÉP 50 CON  |  {thu} {hom_nay:%d.%m.%Y}  |  mọi giải đều có đề xuất")
+    print(f"  {SO_HO_BAU} họ bỏ phiếu · nhãn độ tin: >= {NGUONG_KY}/{N_CUA_SO} ở từng cửa sổ")
     print("=" * 80)
 
     moi_cham = cham_cu(tt, hom_nay)
@@ -416,22 +437,18 @@ def chay(ngay=None, gui_mail=True):
         mien = lich.get(str(s), {}).get("mien", E.lay_dai(s)[2])
         d = {"stt": s, "dai": ten, "mien": mien, "o": [], "loi": ""}
         try:
-            m = E.lay_tu_master(s, SO_KY + 30)
-            if m:
-                tg_all, ng_all, _ = m
-            else:
-                _, _, ng_all, tg_all, _ = E.lay_du_lieu(s, SO_KY + 30)
+            tg_all, ng_all = lay_du_lieu_dai(s)
             tg, ng, _ = E.cat_truoc_ngay(tg_all, ng_all, hom_nay, SO_KY)
         except Exception as e:
             tg, ng = [], []
-            d["loi"] = f"không lấy được dữ liệu: {e}"
+            d["loi"] = str(e)
         for giai, bat in (("DB", CHAY_DB), ("G1", CHAY_G1), ("G8", CHAY_G8)):
             if not bat:
                 continue
             if not tg:
                 if giai == "G8" and E.lay_dai(s)[1] == "xsmb":
                     continue
-                o = {"trang_thai": "LỖI", "ly_do": d["loi"] or "không có dữ liệu"}
+                o = {"muc": MUC_DP, "ly_do": d["loi"] or "không có dữ liệu", "_mt": []}
             else:
                 vi = _vi_tri(tg, giai)
                 if vi is None:
@@ -441,41 +458,49 @@ def chay(ngay=None, gui_mail=True):
                 try:
                     o = quyet_dinh(mt, pool, [_thu(x) for x in ng], hom_nay.weekday())
                 except Exception as e:
-                    o = {"trang_thai": "LỖI", "ly_do": f"lỗi tính toán: {e}"}
+                    o = {"muc": MUC_DP, "ly_do": f"lỗi tính toán: {e}"}
+                o["_mt"] = mt
             o.update(stt=s, dai=ten, giai=giai)
-            if "so" in o:
-                o["ngau"] = ngau_nhien(hn, s, giai)
             d["o"].append(o); tat_ca.append(o)
         dai_list.append(d)
 
-    ap_gioi_han(tat_ca)
+    # DỰ PHÒNG — giải nào chưa có số thì lấy tần suất gộp CÙNG GIẢI của các đài khác hôm nay
+    for o in tat_ca:
+        if "so" not in o:
+            goc = [v for x in tat_ca if x is not o and x["giai"] == o["giai"] for v in x.get("_mt", [])]
+            o["so"] = tan_suat_50(goc) if goc else list(range(SO_CON))
+            o["ly_do"] = (o.get("ly_do", "") + " — " +
+                          (f"50 con theo tần suất gộp {TEN_GIAI[o['giai']]} của các đài khác hôm nay ({len(goc)} kỳ)"
+                           if goc else "không có dữ liệu nào để lập luận, tạm dùng 00–49"))
+        o["ngau"] = ngau_nhien(hn, o["stt"], o["giai"])
 
     for d in dai_list:
         print(f"\n  {d['dai'].upper()}" + (f"   ⚠ {d['loi']}" if d["loi"] else ""))
         for o in d["o"]:
             chi = (f"{' + '.join(o['ba_ho'])} · cửa sổ 1: {o['k1']}/{N_CUA_SO} · cửa sổ 2: {o['k2']}/{N_CUA_SO}"
                    if "ba_ho" in o else o.get("ly_do", ""))
-            print(f"     {TEN_GIAI[o['giai']]:<14} {o['trang_thai']:<9} {chi}")
+            print(f"     {TEN_GIAI[o['giai']]:<14} {o['muc']:<13} {chi}")
 
     da_co = {(r["ngay"], r["stt"], r["giai"]) for r in tt["so"]}
     for o in tat_ca:
-        if "so" in o and (hn, o["stt"], o["giai"]) not in da_co:
-            tt["so"].append({"ngay": hn, "stt": o["stt"], "dai": o["dai"], "giai": o["giai"],
-                             "trang_thai": o["trang_thai"], "thu_hang": o.get("thu_hang"),
-                             "ba_ho": o["ba_ho"], "k1": o["k1"], "k2": o["k2"],
-                             "so": _chuoi(o["so"]), "ngau": _chuoi(o["ngau"]),
-                             "rieng": {h: _chuoi(v) for h, v in o["rieng"].items()}, "ket_qua": None})
+        if (hn, o["stt"], o["giai"]) in da_co:
+            continue
+        r = {"ngay": hn, "stt": o["stt"], "dai": o["dai"], "giai": o["giai"], "muc": o["muc"],
+             "so": _chuoi(o["so"]), "ngau": _chuoi(o["ngau"]), "ket_qua": None}
+        if "ba_ho" in o:
+            r.update(ba_ho=o["ba_ho"], k1=o["k1"], k2=o["k2"],
+                     rieng={h: _chuoi(v) for h, v in o["rieng"].items()})
+        tt["so"].append(r)
     luu_tt(tt)
     tk, bh, bh_cu = thanh_tich(tt), bang_ho(tt), bang_ho_cu()
-    n_dx = sum(1 for o in tat_ca if o["trang_thai"] == "ĐỀ XUẤT")
-    n_db = sum(1 for o in tat_ca if o["trang_thai"] == "DỰ BỊ")
-    print(f"\n  {n_dx} đề xuất · {n_db} dự bị · {len(tat_ca)} giải")
+    dem = {m: sum(1 for o in tat_ca if o["muc"] == m) for m in THU_TU_MUC}
+    print(f"\n  {len(tat_ca)} bộ 50 con · " + " · ".join(f"{m} {v}" for m, v in dem.items() if v))
     for k, (a, b) in tk.items():
         if b:
-            print(f"  Tiến cứu {k:<16} {a}/{b} = {a/b:.1%}")
+            print(f"  Tiến cứu {k:<14} {a}/{b} = {a/b:.1%}")
 
     bc = {"ngay": hom_nay, "thu": thu, "dai": dai_list, "tat_ca": tat_ca, "tk": tk, "bh": bh,
-          "bh_cu": bh_cu, "n_dx": n_dx, "n_db": n_db, "n_o": len(tat_ca)}
+          "bh_cu": bh_cu, "dem": dem, "n_o": len(tat_ca)}
     if gui_mail:
         print("\n  Đang gửi email...")
         gui_email(bc)
@@ -487,17 +512,18 @@ def chay(ngay=None, gui_mail=True):
 #  EMAIL
 # ==============================================================================
 
-MAU = {"ĐỀ XUẤT": "#2e7d32", "DỰ BỊ": "#ef6c00", "ĐỂ TRỐNG": "#90a4ae", "THIẾU": "#b0bec5", "LỖI": "#c62828"}
 TD = 'style="padding:4px 9px;text-align:center"'
 
 
-def _o_cua_so(o):
+def _dong_ly_do(o):
     if "ba_ho" not in o:
         return html.escape(o.get("ly_do", ""))
     def c(k):
         ok = k >= NGUONG_KY
         return f'<span style="color:{"#2e7d32" if ok else "#c62828"}">{k}/{N_CUA_SO} {"✓" if ok else "✗"}</span>'
-    return f'{html.escape(" + ".join(o["ba_ho"]))} · cửa sổ 1: {c(o["k1"])} · cửa sổ 2: {c(o["k2"])}'
+    ch = " + ".join(f'{html.escape(h)} ({html.escape(o["cau_hinh"][h])})' for h in o["ba_ho"])
+    dt = " · ".join(f'{v} con {p}/{SO_HO_BAU} phiếu' for p, v in o["dong_thuan"].items() if v)
+    return f'3 họ: {ch}<br>cửa sổ 1: {c(o["k1"])} · cửa sổ 2: {c(o["k2"])} · đồng thuận: {dt}'
 
 
 def _bang_ho_html(bh, moc):
@@ -522,21 +548,21 @@ def _html(bc):
     ng, thu, tk = bc["ngay"], bc["thu"], bc["tk"]
     h = [f'<div style="{css}max-width:820px;color:#222">']
     h.append(f'<h2 style="margin:0 0 2px">Đo ni kép 50 con — {thu} {ng:%d.%m.%Y}</h2>')
-    h.append(f'<p style="color:#666;margin:0 0 10px;font-size:13px">{len(bc["dai"])} đài · {bc["n_o"]} giải · '
-             f'<b>{bc["n_dx"]} đề xuất</b> · {bc["n_db"]} dự bị</p>')
+    h.append(f'<p style="color:#666;margin:0 0 8px;font-size:13px">{len(bc["dai"])} đài · '
+             f'<b>{bc["n_o"]} bộ 50 con</b> — mọi giải đều có đề xuất</p>')
+    h.append('<div style="font-size:12px;margin:0 0 12px">' + " ".join(
+        f'<span style="background:{MAU[m]};color:#fff;padding:2px 8px;border-radius:3px;margin-right:4px">'
+        f'{m}: {v}</span>' for m, v in bc["dem"].items() if v) + '</div>')
     h.append(f'<div style="background:#fff8e1;border-left:4px solid #f9a825;padding:9px 12px;margin:0 0 16px;'
-             f'font-size:12px;line-height:1.6"><b>Quy tắc:</b> kỳ 1–110 chọn {SO_HO_BAU} họ mạnh nhất → '
-             f'3 họ bỏ phiếu ra {SO_CON} con → bộ phiếu đó phải trúng ≥ {NGUONG_KY}/{N_CUA_SO} ở cả kỳ 111–130 '
-             f'lẫn kỳ 131–150 → '
-             + ('mọi giải qua cả hai cửa sổ đều được đề xuất, xếp theo bằng chứng.' if MAX_DE_XUAT is None
-                else f'tối đa {MAX_DE_XUAT} giải mạnh nhất được đề xuất.')
-             + f'<br><b>Ba mốc (50 con):</b> '
+             f'font-size:12px;line-height:1.6"><b>Cách chọn:</b> kỳ 1–110 chọn {SO_HO_BAU} họ mạnh nhất → '
+             f'3 họ bỏ phiếu ra {SO_CON} con. <b>Nhãn độ tin</b> (chỉ tham khảo): bộ phiếu đó trúng '
+             f'≥ {NGUONG_KY}/{N_CUA_SO} ở cửa sổ kỳ 111–130 và/hoặc 131–150.<br><b>Ba mốc (50 con):</b> '
              f'bốc bừa 50% · hoà vốn {HOA_VON:.2%} · kỳ vọng −5% (tỷ lệ trả 95).</div>')
 
     h.append('<div style="font-size:15px;font-weight:700;margin:0 0 6px">THÀNH TÍCH TIẾN CỨU</div>')
-    if not any(b for _, b in tk.values()):
+    if not tk["TẤT CẢ BỘ SỐ"][1]:
         h.append('<p style="font-size:13px;color:#607d8b;margin:0 0 16px">Chưa có bộ số nào được chấm. '
-                 'Sổ bản 50 con bắt đầu tích luỹ từ ngày mai.</p>')
+                 'Sổ bắt đầu tích luỹ từ ngày mai.</p>')
     else:
         h.append('<table style="font-size:12px;border-collapse:collapse;margin:0 0 6px">'
                  '<tr style="background:#eceff1"><th style="padding:4px 9px;text-align:left">Nhóm</th>'
@@ -544,89 +570,61 @@ def _html(bc):
         for k, (a, b) in tk.items():
             if b:
                 lo, hi = wilson(a, b)
-                h.append(f'<tr><td style="padding:4px 9px">{k}</td><td {TD}>{a}/{b}</td>'
+                nhan = f'<b>{k}</b>' if k == "TẤT CẢ BỘ SỐ" else (k if k == "NGẪU NHIÊN" else f'&nbsp;&nbsp;└ {k}')
+                h.append(f'<tr><td style="padding:4px 9px">{nhan}</td><td {TD}>{a}/{b}</td>'
                          f'<td {TD}><b>{a/b:.1%}</b></td><td {TD}>[{lo:.0%}, {hi:.0%}]</td></tr>')
-        h.append('</table><p style="font-size:12px;color:#607d8b;margin:0 0 16px">Nhóm ĐỀ XUẤT phải trúng '
-                 'nhiều hơn cả ĐỂ TRỐNG lẫn NGẪU NHIÊN qua nhiều tuần thì cách làm này mới có giá trị. '
-                 'Nếu hạng 4 trở đi trúng kém hẳn hạng 1–3, đó là tín hiệu nên bật lại giới hạn.</p>')
+        h.append('</table><p style="font-size:12px;color:#607d8b;margin:0 0 16px">"TẤT CẢ BỘ SỐ" phải trúng '
+                 'nhiều hơn NGẪU NHIÊN qua nhiều tuần thì cách chọn có giá trị. Nếu "QUA 2 CỬA SỔ" trúng nhiều '
+                 'hơn hẳn "KHÔNG QUA", nhãn độ tin đáng dùng để ưu tiên.</p>')
 
-    dx = [o for o in bc["tat_ca"] if o["trang_thai"] == "ĐỀ XUẤT"]
-    h.append('<div style="font-size:15px;font-weight:700;margin:6px 0 6px">ĐỀ XUẤT HÔM NAY</div>')
-    if not dx:
-        h.append('<div style="border-left:4px solid #90a4ae;background:#fafafa;padding:11px 13px;margin:0 0 16px;'
-                 'font-size:13px"><b>Không giải nào qua được cả hai cửa sổ hôm nay.</b> Không đề xuất.</div>')
-    for o in dx:
-        dt = " · ".join(f'{v} con {p}/{SO_HO_BAU} phiếu' for p, v in o["dong_thuan"].items() if v)
-        ch = " · ".join(f'{html.escape(hh)} ({html.escape(o["cau_hinh"][hh])})' for hh in o["ba_ho"])
-        h.append(f'<div style="margin:0 0 14px;border:1px solid #cfd8dc;border-radius:5px">'
-                 f'<div style="padding:8px 12px;background:#263238;color:#fff"><b>#{o["thu_hang"]} · '
-                 f'{html.escape(o["dai"].upper())} — {TEN_GIAI[o["giai"]]}</b></div>'
-                 f'<div style="padding:9px 12px"><div style="font-size:12px;color:#455a64;margin-bottom:3px">'
-                 f'3 họ bỏ phiếu: <b>{ch}</b></div>'
-                 f'<div style="font-size:12px;color:#455a64;margin-bottom:5px">cửa sổ 1: <b>{o["k1"]}/{N_CUA_SO}</b> · '
-                 f'cửa sổ 2: <b>{o["k2"]}/{N_CUA_SO}</b> · đồng thuận: {dt}</div>'
-                 f'<div style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;background:#e8f5e9;'
-                 f'border-left:4px solid #2e7d32;padding:9px 11px;word-break:break-all;line-height:1.85">'
-                 f'{_chuoi(o["so"])}</div></div></div>')
-
-    db = [o for o in bc["tat_ca"] if o["trang_thai"] == "DỰ BỊ"]
-    if db:
-        h.append(f'<div style="font-size:13px;margin:0 0 14px;color:#ef6c00"><b>DỰ BỊ</b> — qua cả hai cửa sổ '
-                 f'nhưng ngoài top {MAX_DE_XUAT} hôm nay: '
-                 + "; ".join(f'{html.escape(o["dai"])} {TEN_GIAI[o["giai"]]} ({o["k1"]}+{o["k2"]})' for o in db)
-                 + '</div>')
-
-    h.append('<div style="font-size:15px;font-weight:700;margin:6px 0 6px">MỌI GIẢI HÔM NAY</div>'
-             '<table style="font-size:12px;border-collapse:collapse;margin:0 0 16px">')
     for d in bc["dai"]:
-        for i, o in enumerate(d["o"]):
-            h.append(f'<tr><td style="padding:3px 8px">{html.escape(d["dai"]) if i == 0 else ""}</td>'
-                     f'<td style="padding:3px 8px">{TEN_GIAI[o["giai"]]}</td>'
-                     f'<td style="padding:3px 8px"><span style="background:{MAU.get(o["trang_thai"], "#999")};'
-                     f'color:#fff;padding:1px 6px;border-radius:3px;font-size:11px">{o["trang_thai"]}</span></td>'
-                     f'<td style="padding:3px 8px;color:#546e7a">{_o_cua_so(o)}</td></tr>')
-    h.append('</table>')
+        h.append(f'<div style="margin:14px 0 0;padding:8px 12px;background:#263238;color:#fff;'
+                 f'border-radius:5px 5px 0 0"><b style="font-size:16px">{html.escape(d["dai"].upper())}</b>'
+                 f'<span style="font-size:12px;opacity:.8"> &nbsp;|&nbsp; {html.escape(str(d["mien"]))}'
+                 f' &nbsp;|&nbsp; {thu} {ng:%d.%m.%Y}</span></div>'
+                 '<div style="border:1px solid #cfd8dc;border-top:0;border-radius:0 0 5px 5px;padding:4px 12px 12px">')
+        for o in d["o"]:
+            h.append(f'<div style="margin:10px 0 0"><b style="font-size:14px">{TEN_GIAI[o["giai"]]}</b> '
+                     f'<span style="background:{MAU[o["muc"]]};color:#fff;padding:1px 7px;border-radius:3px;'
+                     f'font-size:11px">{o["muc"]}</span>'
+                     f'<div style="font-size:11px;color:#546e7a;margin-top:3px;line-height:1.5">{_dong_ly_do(o)}</div>'
+                     f'<div style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;'
+                     f'background:#f1f8e9;border-left:4px solid {MAU[o["muc"]]};padding:8px 10px;margin-top:4px;'
+                     f'word-break:break-all;line-height:1.85">{_chuoi(o["so"])}</div></div>')
+        h.append('</div>')
 
-    h.append('<div style="font-size:15px;font-weight:700;margin:6px 0 4px">BẢNG XẾP HẠNG HỌ LOGIC (50 con) — '
+    h.append('<div style="font-size:15px;font-weight:700;margin:18px 0 4px">BẢNG XẾP HẠNG HỌ LOGIC (50 con) — '
              'chỉ để theo dõi</div>')
     h.append(_bang_ho_html(bc["bh"], "50%"))
-    h.append('<p style="font-size:12px;color:#607d8b;margin:4px 0 0">Mỗi họ đã bỏ phiếu được chấm bằng 50 con '
-             'riêng của nó. Chưa dùng để quyết định — sau 4–6 tuần mới xem xét luật khoá.</p>')
     if bc["bh_cu"]:
         h.append('<details style="margin:12px 0 0"><summary style="font-size:13px;color:#546e7a;cursor:pointer">'
                  'Lịch sử họ logic ở bản 64 con (chỉ đọc)</summary>' + _bang_ho_html(bc["bh_cu"], "64%")
                  + '</details>')
-
     h.append('<hr style="margin:20px 0 10px;border:0;border-top:1px solid #ddd">'
-             '<p style="font-size:12px;color:#888;line-height:1.6">3 họ mạnh nhất bỏ phiếu thay vì cả 9 họ, vì '
-             'họ không bắt được logic sẽ kéo con sai vào danh sách. Hai cửa sổ lọc bớt giải chỉ trông tốt nhờ '
-             'may. Máy quay công bằng thì mọi bộ 50 con trúng 50% — bộ lọc chỉ đổi được tỷ trọng bộ có logic '
-             'thật trong số đề xuất.</p></div>')
+             '<p style="font-size:12px;color:#888;line-height:1.6">Mọi giải đều có 50 con. Nhãn độ tin cho biết '
+             'bộ phiếu của giải đó đã đứng vững bao nhiêu cửa sổ gần nhất — không phải lời hứa trúng. Máy quay '
+             'công bằng thì mọi bộ 50 con trúng 50%.</p></div>')
     return "".join(h)
 
 
 def _text(bc):
     t = [f"ĐO NI KÉP 50 CON — {bc['thu']} {bc['ngay']:%d.%m.%Y}",
-         f"{bc['n_dx']} đề xuất · {bc['n_db']} dự bị · {bc['n_o']} giải", ""]
-    for o in bc["tat_ca"]:
-        if o["trang_thai"] == "ĐỀ XUẤT":
-            t.append(f"#{o['thu_hang']} {o['dai'].upper()} {TEN_GIAI[o['giai']]} "
-                     f"[ĐỀ XUẤT · {' + '.join(o['ba_ho'])} · {o['k1']}/{N_CUA_SO} + {o['k2']}/{N_CUA_SO}]")
+         f"{bc['n_o']} bộ 50 con — mọi giải đều có đề xuất", ""]
+    for d in bc["dai"]:
+        t.append(d["dai"].upper())
+        for o in d["o"]:
+            chi = (f" · {o['k1']}/{N_CUA_SO} + {o['k2']}/{N_CUA_SO}" if "ba_ho" in o else "")
+            t.append(f"  {TEN_GIAI[o['giai']]} [{o['muc']}{chi}]")
             t.append("  " + _chuoi(o["so"]))
-    t.append("")
-    for o in bc["tat_ca"]:
-        if o["trang_thai"] != "ĐỀ XUẤT":
-            chi = (f"{' + '.join(o['ba_ho'])} · {o['k1']}/{N_CUA_SO} + {o['k2']}/{N_CUA_SO}" if "ba_ho" in o
-                   else o.get("ly_do", ""))
-            t.append(f"{o['dai']} {TEN_GIAI[o['giai']]} [{o['trang_thai']} · {chi}]")
+        t.append("")
     return "\n".join(t)
 
 
 def gui_email(bc):
     mk = E._lay_mat_khau()
     msg = MIMEMultipart("alternative")
-    msg["Subject"] = (f"[ĐO NI KÉP 50] {bc['thu']} {bc['ngay']:%d.%m.%Y} — "
-                      + (f"{bc['n_dx']} đề xuất" if bc["n_dx"] else "không có đề xuất"))
+    msg["Subject"] = (f"[ĐO NI KÉP 50] {bc['thu']} {bc['ngay']:%d.%m.%Y} — {bc['n_o']} bộ 50 con · "
+                      f"{bc['dem'][MUC_2]} giải qua 2 cửa sổ")
     msg["From"] = formataddr(("XSMN Đo Ni Kép 50", EMAIL_GUI))
     msg["To"] = EMAIL_NHAN
     msg.attach(MIMEText(_text(bc), "plain", "utf-8"))
