@@ -4,10 +4,12 @@ Mỗi sáng 6h35 (giờ VN), workflow tự lấy kết quả mới, chạy bộ 
 giải của các đài quay hôm đó, rồi gửi email.
 
 ## Quy tắc
-- Kỳ 1–110: xếp hạng 10 họ logic, 3 họ mạnh nhất được bỏ phiếu (họ ĐỀU không bỏ phiếu)
+- MỌI giải của MỌI đài quay hôm đó đều có bộ 50 con
+- Kỳ 1–110: xếp hạng 10 họ logic, 3 họ mạnh nhất bỏ phiếu (họ ĐỀU không bỏ phiếu)
 - Mỗi họ đề cử 64 con; lấy 50 con nhiều phiếu nhất (hoà phiếu: tổng thứ hạng nhỏ hơn đứng trước)
-- Kỳ 111–130 và 131–150: CÙNG bộ 3 họ đó phải trúng >= 11/20 ở cả hai cửa sổ
-- Qua cả hai -> ĐỀ XUẤT, xếp hạng theo bằng chứng (không giới hạn số đề xuất mỗi ngày)
+- Nhãn độ tin (chỉ tham khảo, không chặn): bộ phiếu trúng >= 11/20 ở cửa sổ kỳ 111–130
+  và/hoặc 131–150 -> QUA 2 CỬA SỔ / QUA 1 CỬA SỔ / KHÔNG QUA
+- Đài ít dữ liệu -> 50 con theo tần suất; đài lỗi dữ liệu -> 50 con theo tần suất gộp cùng giải
 
 ## File
 | File | Vai trò |
