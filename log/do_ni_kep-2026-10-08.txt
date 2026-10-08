@@ -1,0 +1,61 @@
+  Mật khẩu ứng dụng: OK
+  Kho: 36 đài, cập nhật 2026-10-07T09:42
+  Cập nhật 36 đài (tải 20 kỳ gần nhất mỗi đài)...
+     + [ 9] Cần Thơ               1 kỳ mới → mới nhất 2026-10-07
+     + [11] Đồng Nai              1 kỳ mới → mới nhất 2026-10-07
+     + [16] Sóc Trăng             1 kỳ mới → mới nhất 2026-10-07
+     + [23] Đà Nẵng               1 kỳ mới → mới nhất 2026-10-07
+     + [27] Khánh Hòa             1 kỳ mới → mới nhất 2026-10-07
+     + [36] Miền Bắc (XSMB)       1 kỳ mới → mới nhất 2026-10-07
+
+  Xong. Thêm 6 kỳ mới.
+================================================================================
+  ĐO NI KÉP 50 CON  |  Thứ 5 08.10.2026  |  mọi giải đều có đề xuất
+  3 họ bỏ phiếu · nhãn độ tin: >= 11/20 ở từng cửa sổ
+================================================================================
+
+[CHẤM HÔM TRƯỚC] 17 bộ vừa có kết quả
+
+  AN GIANG
+     ① Đặc Biệt     QUA 1 CỬA SỔ  MARKOV + TẦN SUẤT + GẦN ĐÂY · cửa sổ 1: 13/20 · cửa sổ 2: 7/20
+     ② Giải Nhất    KHÔNG QUA     ĐỘC LẬP + CỬA SỔ + MARKOV · cửa sổ 1: 10/20 · cửa sổ 2: 7/20
+     ③ Giải 8       QUA 1 CỬA SỔ  CỬA SỔ + MARKOV + ĐỘC LẬP · cửa sổ 1: 12/20 · cửa sổ 2: 9/20
+
+  BÌNH THUẬN
+     ① Đặc Biệt     QUA 1 CỬA SỔ  GAN + ĐỘC LẬP + MARKOV · cửa sổ 1: 11/20 · cửa sổ 2: 10/20
+     ② Giải Nhất    QUA 2 CỬA SỔ  GỘP GIẢI + CỬA SỔ + GAN · cửa sổ 1: 15/20 · cửa sổ 2: 13/20
+     ③ Giải 8       QUA 1 CỬA SỔ  CỬA SỔ + ĐỘC LẬP + GẦN ĐÂY · cửa sổ 1: 12/20 · cửa sổ 2: 9/20
+
+  TÂY NINH
+     ① Đặc Biệt     KHÔNG QUA     GAN + MARKOV + ĐỘC LẬP · cửa sổ 1: 8/20 · cửa sổ 2: 9/20
+     ② Giải Nhất    QUA 1 CỬA SỔ  MARKOV + TẦN SUẤT + GỘP GIẢI · cửa sổ 1: 4/20 · cửa sổ 2: 12/20
+     ③ Giải 8       KHÔNG QUA     GỘP GIẢI + ĐỘC LẬP + TỔNG CS · cửa sổ 1: 9/20 · cửa sổ 2: 6/20
+
+  BÌNH ĐỊNH
+     ① Đặc Biệt     QUA 1 CỬA SỔ  CỬA SỔ + GAN + GẦN ĐÂY · cửa sổ 1: 10/20 · cửa sổ 2: 13/20
+     ② Giải Nhất    KHÔNG QUA     GAN + GỘP GIẢI + ĐỘC LẬP · cửa sổ 1: 7/20 · cửa sổ 2: 9/20
+     ③ Giải 8       QUA 1 CỬA SỔ  TỔNG CS + GẦN ĐÂY + CỬA SỔ · cửa sổ 1: 8/20 · cửa sổ 2: 11/20
+
+  QUẢNG BÌNH
+     ① Đặc Biệt     KHÔNG QUA     CỬA SỔ + GẦN ĐÂY + TẦN SUẤT · cửa sổ 1: 7/20 · cửa sổ 2: 7/20
+     ② Giải Nhất    QUA 1 CỬA SỔ  GỘP GIẢI + MARKOV + CỬA SỔ · cửa sổ 1: 10/20 · cửa sổ 2: 11/20
+     ③ Giải 8       KHÔNG QUA     ĐỘC LẬP + MARKOV + GẦN ĐÂY · cửa sổ 1: 10/20 · cửa sổ 2: 10/20
+
+  QUẢNG TRỊ
+     ① Đặc Biệt     QUA 1 CỬA SỔ  TỔNG CS + GẦN ĐÂY + TẦN SUẤT · cửa sổ 1: 8/20 · cửa sổ 2: 13/20
+     ② Giải Nhất    QUA 1 CỬA SỔ  TỔNG CS + GẦN ĐÂY + TẦN SUẤT · cửa sổ 1: 13/20 · cửa sổ 2: 6/20
+     ③ Giải 8       KHÔNG QUA     MARKOV + TỔNG CS + ĐỘC LẬP · cửa sổ 1: 10/20 · cửa sổ 2: 9/20
+
+  MIỀN BẮC (XSMB)
+     ① Đặc Biệt     QUA 2 CỬA SỔ  TẦN SUẤT + GẦN ĐÂY + GAN · cửa sổ 1: 12/20 · cửa sổ 2: 14/20
+     ② Giải Nhất    QUA 1 CỬA SỔ  GẦN ĐÂY + TẦN SUẤT + CỬA SỔ · cửa sổ 1: 8/20 · cửa sổ 2: 11/20
+
+  20 bộ 50 con · QUA 2 CỬA SỔ 2 · QUA 1 CỬA SỔ 11 · KHÔNG QUA 7
+  Tiến cứu TẤT CẢ BỘ SỐ   72/165 = 43.6%
+  Tiến cứu QUA 2 CỬA SỔ   10/33 = 30.3%
+  Tiến cứu QUA 1 CỬA SỔ   39/82 = 47.6%
+  Tiến cứu KHÔNG QUA      23/50 = 46.0%
+  Tiến cứu NGẪU NHIÊN     75/165 = 45.5%
+
+  Đang gửi email...
+  ✓ Đã gửi email tới Linh.tm.pg@gmail.com
