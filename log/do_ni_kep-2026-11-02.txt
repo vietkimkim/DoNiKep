@@ -1,0 +1,58 @@
+  Mật khẩu ứng dụng: OK
+  Kho: 36 đài, cập nhật 2026-11-01T09:32
+  Cập nhật 36 đài (tải 20 kỳ gần nhất mỗi đài)...
+     + [10] Đà Lạt (Lâm Đồng)     1 kỳ mới → mới nhất 2026-11-01
+     + [14] Kiên Giang            1 kỳ mới → mới nhất 2026-11-01
+     + [18] Tiền Giang            1 kỳ mới → mới nhất 2026-11-01
+     + [27] Khánh Hòa             1 kỳ mới → mới nhất 2026-11-01
+     + [28] Kon Tum               1 kỳ mới → mới nhất 2026-11-01
+     + [35] Thành phố Huế         1 kỳ mới → mới nhất 2026-11-01
+     + [36] Miền Bắc (XSMB)       1 kỳ mới → mới nhất 2026-11-01
+
+  Xong. Thêm 7 kỳ mới.
+================================================================================
+  ĐO NI KÉP 50 CON  |  Thứ 2 02.11.2026  |  mọi giải đều có đề xuất
+  3 họ bỏ phiếu · nhãn độ tin: >= 11/20 ở từng cửa sổ
+================================================================================
+
+[CHẤM HÔM TRƯỚC] 20 bộ vừa có kết quả
+     ⚠ chỉ đọc được 153/200 ngày mở thưởng — 47 kỳ cũ nhất sẽ bị bỏ qua
+
+  CÀ MAU
+     ① Đặc Biệt     QUA 1 CỬA SỔ  CỬA SỔ + GAN + GỘP GIẢI · cửa sổ 1: 6/20 · cửa sổ 2: 12/20
+     ② Giải Nhất    KHÔNG QUA     TẦN SUẤT + GỘP GIẢI + CỬA SỔ · cửa sổ 1: 8/20 · cửa sổ 2: 10/20
+     ③ Giải 8       QUA 1 CỬA SỔ  MARKOV + GỘP GIẢI + GAN · cửa sổ 1: 15/20 · cửa sổ 2: 9/20
+
+  TP. HỒ CHÍ MINH
+     ① Đặc Biệt     QUA 1 CỬA SỔ  GỘP GIẢI + TỔNG CS + CỬA SỔ · cửa sổ 1: 9/20 · cửa sổ 2: 11/20
+     ② Giải Nhất    QUA 1 CỬA SỔ  ĐỘC LẬP + CỬA SỔ + LỊCH · cửa sổ 1: 9/20 · cửa sổ 2: 12/20
+     ③ Giải 8       KHÔNG QUA     GỘP GIẢI + TẦN SUẤT + GẦN ĐÂY · cửa sổ 1: 9/20 · cửa sổ 2: 7/20
+
+  ĐỒNG THÁP
+     ① Đặc Biệt     KHÔNG QUA     TỔNG CS + GỘP GIẢI + CỬA SỔ · cửa sổ 1: 10/20 · cửa sổ 2: 9/20
+     ② Giải Nhất    KHÔNG QUA     GỘP GIẢI + GẦN ĐÂY + ĐỘC LẬP · cửa sổ 1: 8/20 · cửa sổ 2: 6/20
+     ③ Giải 8       QUA 1 CỬA SỔ  ĐỘC LẬP + TỔNG CS + MARKOV · cửa sổ 1: 12/20 · cửa sổ 2: 7/20
+
+  PHÚ YÊN
+     ① Đặc Biệt     KHÔNG QUA     GỘP GIẢI + GAN + CỬA SỔ · cửa sổ 1: 10/20 · cửa sổ 2: 7/20
+     ② Giải Nhất    QUA 2 CỬA SỔ  CỬA SỔ + GẦN ĐÂY + GỘP GIẢI · cửa sổ 1: 14/20 · cửa sổ 2: 11/20
+     ③ Giải 8       KHÔNG QUA     TẦN SUẤT + CỬA SỔ + ĐỘC LẬP · cửa sổ 1: 8/20 · cửa sổ 2: 9/20
+
+  THÀNH PHỐ HUẾ
+     ① Đặc Biệt     QUA 1 CỬA SỔ  CỬA SỔ + LỊCH + ĐỘC LẬP · cửa sổ 1: 13/20 · cửa sổ 2: 7/20
+     ② Giải Nhất    QUA 2 CỬA SỔ  MARKOV + GAN + GỘP GIẢI · cửa sổ 1: 13/20 · cửa sổ 2: 13/20
+     ③ Giải 8       QUA 1 CỬA SỔ  GAN + MARKOV + GỘP GIẢI · cửa sổ 1: 12/20 · cửa sổ 2: 7/20
+
+  MIỀN BẮC (XSMB)
+     ① Đặc Biệt     QUA 1 CỬA SỔ  GAN + MARKOV + GỘP GIẢI · cửa sổ 1: 11/20 · cửa sổ 2: 7/20
+     ② Giải Nhất    KHÔNG QUA     GẦN ĐÂY + TẦN SUẤT + CỬA SỔ · cửa sổ 1: 9/20 · cửa sổ 2: 6/20
+
+  17 bộ 50 con · QUA 2 CỬA SỔ 2 · QUA 1 CỬA SỔ 8 · KHÔNG QUA 7
+  Tiến cứu TẤT CẢ BỘ SỐ   301/638 = 47.2%
+  Tiến cứu QUA 2 CỬA SỔ   52/98 = 53.1%
+  Tiến cứu QUA 1 CỬA SỔ   161/341 = 47.2%
+  Tiến cứu KHÔNG QUA      88/199 = 44.2%
+  Tiến cứu NGẪU NHIÊN     321/638 = 50.3%
+
+  Đang gửi email...
+  ✓ Đã gửi email tới Linh.tm.pg@gmail.com
